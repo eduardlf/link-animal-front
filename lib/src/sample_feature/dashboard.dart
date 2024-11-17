@@ -21,10 +21,10 @@ class AnimalDashboard extends StatelessWidget {
               color: Colors.orange,
             ),
             _buildDashboardCard(
-              title: 'Consultas',
+              title: 'Castração',
               icon: Icons.medical_services,
               count: 5,
-              description: 'Animais com consultas marcadas',
+              description: 'Animais com castração pendente',
               color: Colors.blue,
             ),
             _buildDashboardCard(
@@ -68,7 +68,12 @@ class AnimalDashboard extends StatelessWidget {
     required String description,
     required Color color,
   }) {
-    return Card(
+    return InkWell(
+        onTap: () {
+          
+        },
+      child: 
+       Card(
       color: color.withOpacity(0.1),
       elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -93,7 +98,7 @@ class AnimalDashboard extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     description,
-                    style: TextStyle(fontSize: 16, color: Colors.black87),
+                    style: TextStyle(fontSize: 16, ),
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
@@ -110,6 +115,7 @@ class AnimalDashboard extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }
